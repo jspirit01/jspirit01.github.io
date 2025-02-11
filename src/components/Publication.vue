@@ -32,6 +32,7 @@
             </div>
           </div>
           
+          
         </div>
       </div>
   
@@ -116,8 +117,8 @@
   .publication-list .publication-line .journal {
     padding-bottom: 0.3rem;
     font-weight: 500;
-    display: flex;
-    gap:5px;
+    /* display: flex; */
+    /* gap:5px; */
   }
 .publication-list .publication-line .citations {
     font-style: italic;
@@ -130,6 +131,8 @@
   border-radius: 5px; 
   padding: 0px 3px;
   font-size: 0.8rem;
+  margin-left:3px;
+  margin-right:3px;
   /* text-decoration: none; */
 
 }

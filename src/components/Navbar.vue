@@ -15,10 +15,10 @@
           @click.prevent="$emit('scroll', 'home')"
         >
           <Logo :nightMode="nightMode" />
-          <div
+          <!-- <div
           class="recent-update-date pblue">
           updated 2025.2
-          </div>
+          </div> -->
         </a>
         <button
           class="navbar-toggler"
