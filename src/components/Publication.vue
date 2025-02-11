@@ -27,9 +27,9 @@
             <a :href="pub.paper_link" target="_blank" class="paper-box">paper</a> 
             <a v-if="pub.video_link" :href="pub.video_link" target="_blank" class="paper-box">video</a>
             <!-- 인용 수가 0보다 클 때만 표시 -->
-            <div class="citations pgray" v-if="pub.citations > 0">
+            <span class="citations pgray" v-if="pub.citations > 0">
                 cited by {{ pub.citations }}
-            </div>
+            </span>
           </div>
           
           
@@ -120,7 +120,7 @@
     /* display: flex; */
     /* gap:5px; */
   }
-.publication-list .publication-line .citations {
+.publication-list .publication-line .journal .citations {
     font-style: italic;
     font-size: 0.8rem;
     align-self: flex-end;
