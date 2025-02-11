@@ -19,12 +19,12 @@
                 >{{ portfolio.name }}</a
               ></span
             >
-            <a
+            <!-- <a
               class="pull-right"
               style="font-size: 18px;"
               @click="$emit('close')"
               ><i class="fas fa-times"></i
-            ></a>
+            ></a> -->
             <hr
               class="my-1"
               :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"
@@ -32,7 +32,7 @@
           </div>
           <div class="modal-body my-0 pb-0 px-4 pt-0">
             <div
-              class="mb-2 date"
+              class="mb-2 date mt-2"
               :class="{ 'text-light': nightMode, pbgray: nightMode }"
             >
               <span>{{ portfolio.date }} • {{ portfolio.category }}</span>
@@ -47,7 +47,7 @@
               >
             </div>
 
-            <div style="text-align: justify;">
+            <div style="text-align: justify; font-size:14px;">
               <span v-html="portfolio.description"></span>
             </div>
             <hr />

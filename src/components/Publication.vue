@@ -1,44 +1,137 @@
 <template>
-    <div class="publications">
-      <div v-for="(pub, index) in publications" :key="index"
-           class="publication-line"
-           data-aos="fade-up"
-           data-aos-once="true"
-           data-aos-easing="ease-in-out"
-           data-aos-mirror="true">
-        <div class="title">{{ pub.title }}</div>
-        <!-- v-html을 사용해 HTML 태그(<u> 등)를 렌더링 -->
-        <div class="authors" v-html="pub.authors"></div>
-        <div class="journal">
-          {{ pub.journal }}
-          <a :href="pub.paper_link" target="_blank">[paper]</a>
-          <a v-if="pub.video_link" :href="pub.video_link" target="_blank">[video]</a>
+    <div :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }" class="p-st">
+      <!-- Main Title -->
+      <div class="maintitle" data-aos="fade" data-aos-once="true" data-aos-duration="1000">
+        <span>Publication</span>
+      </div>
+  
+      <!-- International Publications -->
+      <div class="minititle" data-aos="fade" data-aos-once="true" data-aos-duration="1000">
+        <span>International</span>
+      </div>
+      <div class="publication-list">
+        <div
+          v-for="(pub, index) in international"
+          :key="'int-' + index"
+          class="publication-line"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+        >
+          <div class="title">{{ pub.title }}</div>
+          <!-- HTML 태그 포함을 위해 v-html 사용 -->
+          <div class="authors" v-html="pub.authors"></div>
+          <div class="journal">
+            {{ pub.journal }}
+            <a :href="pub.paper_link" target="_blank" class="paper-box">paper</a> 
+            <a v-if="pub.video_link" :href="pub.video_link" target="_blank" class="paper-box">video</a>
+            <!-- 인용 수가 0보다 클 때만 표시 -->
+            <div class="citations pgray" v-if="pub.citations > 0">
+                cited by {{ pub.citations }}
+            </div>
+          </div>
+          
         </div>
-        <div class="citations">
-          Citations: {{ pub.citations }}
+      </div>
+  
+      <!-- Domestic Publications -->
+      <div class="minititle" data-aos="fade" data-aos-once="true" data-aos-duration="1000">
+        <span>Domestic</span>
+      </div>
+      <div class="publication-list">
+        <div
+          v-for="(pub, index) in domestic"
+          :key="'dom-' + index"
+          class="publication-line"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+        >
+          <div class="title">{{ pub.title }}</div>
+          <div class="authors" v-html="pub.authors"></div>
+          <div class="journal">
+            {{ pub.journal }}
+          </div> 
+            <a v-if="pub.paper_link" :href="pub.paper_link" target="_blank">[paper] </a>
+            <span class="citations" v-if="pub.citations > 0">
+             Citations: {{ pub.citations }}
+            </span>
+          
         </div>
       </div>
     </div>
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  export default {
     name: "Publication",
+    props: {
+      nightMode: {
+        type: Boolean,
+        default: false
+      }
+    },
     data() {
-        return {
-        publications: [],
-        };
+      return {
+        international: [],
+        domestic: []
+      };
     },
     mounted() {
-        // 배포 시 public 폴더의 파일은 루트에 위치하므로 '/publications.json' 경로 사용
-        fetch('/publications.json')
+      // public 폴더의 publications.json 파일을 불러옴
+      fetch('/publications.json')
         .then(response => response.json())
         .then(data => {
-            this.publications = data;
+          if (data.publications && data.publications.length >= 2) {
+            // 첫 번째 객체는 국제 논문, 두 번째 객체는 국내 논문
+            this.international = data.publications[0].international || [];
+            this.domestic = data.publications[1].domestics || [];
+          }
         })
         .catch(error => {
-            console.error('Error fetching publications:', error);
+          console.error('Error fetching publications:', error);
         });
-    },
-};
-</script>
+    }
+  };
+  </script>
+  
+  <style>
+  .publication-list .publication-line {
+    margin-top: 14px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .publication-list .publication-line .title {
+    font-size: 16px;
+    padding-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  .publication-list .publication-line .authors {
+    padding-bottom: 0.3rem;
+    font-weight: 400;
+  }
+  .publication-list .publication-line .journal {
+    padding-bottom: 0.3rem;
+    font-weight: 500;
+    display: flex;
+    gap:5px;
+  }
+.publication-list .publication-line .citations {
+    font-style: italic;
+    font-size: 0.8rem;
+    align-self: flex-end;
+}
+
+.paper-box {
+  background-color: #f0f0f0; 
+  border-radius: 5px; 
+  padding: 0px 3px;
+  font-size: 0.8rem;
+  /* text-decoration: none; */
+  
+}
+  </style>
+  

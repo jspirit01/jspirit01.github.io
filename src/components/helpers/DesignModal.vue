@@ -10,7 +10,7 @@
             'text-light': nightMode,
           }"
         >
-          <div class="title1 px-4 pt-3">
+          <div class="modal-title px-4 pt-3">
             <span :class="{ 'text-light': nightMode }">{{
               portfolio.name
             }}</span>
@@ -196,7 +196,7 @@ a:hover {
   font-size: 30px;
   font-weight: 500;
 }
-.title1 {
+.modal-title {
   font-size: 24px;
   font-weight: 400;
 }

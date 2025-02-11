@@ -1,6 +1,9 @@
 <template>
   <!-- <div class="bg-secondary"> -->
-  <div class="footer">
+  <!-- <div class="footer"> -->
+    
+    <div :class="{ 'bg-light': !nightMode, 'bg-dark2': nightMode }" class="footer p-st">
+
     <div class="container py-1 pt-1">
       <!-- <div class="row pt-2 align-items-center"> -->
         
@@ -52,6 +55,11 @@ export default {
       resume: info.links.resume,
     };
   },
+  props: {
+    nightMode: {
+      type: Boolean,
+    },
+  },
   methods: {
     open(link) {
       switch (link) {
@@ -82,7 +90,7 @@ span {
 
 .footer {
   text-align: center;
-  border-top: 0.5px solid gray; /* Add a line above the span */
+  border-top: 1px solid rgba(160, 159, 159, 0.336);
   width: 100%;
 }
 

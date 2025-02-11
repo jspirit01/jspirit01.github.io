@@ -23,7 +23,10 @@
 
             <div class="contact-list">
               <div class="contact-line">
-                <a href="mailto:scijspirit@gmail.com"><i class="fa fa-sharp fa-solid fa-envelope"></i> scijspirit@gmail.com</a>
+                <i class="fa fa-solid fa-map-marker"></i><span>Republic of Korea</span>
+              </div>
+              <div class="contact-line">
+                <i class="fa fa-solid fa-envelope"></i><a href="mailto:scijspirit@gmail.com">scijspirit@gmail.com</a>
                 <!-- <span type="button" 
                 v-tooltip="{
                     placement: 'right',
@@ -39,13 +42,13 @@
                 <a href="mailto:jspirit01@gm.gist.ac.kr"><i class="fa fa-sharp fa-solid fa-envelope"></i> jspirit01@gm.gist.ac.kr</a>
               </div> -->
               <div class="contact-line">
-                <a href="https://scholar.google.com/citations?user=8GXb90gAAAAJ" target="_blank"><i class="fa fa-graduation-cap"></i> Google Scholar</a>
+                <i class="fa fa-graduation-cap"></i><a href="https://scholar.google.com/citations?user=8GXb90gAAAAJ" target="_blank">Google Scholar</a>
               </div>
               <div class="contact-line">
-                <a href="https://www.linkedin.com/in/jooyeong-kim-775049274/" target="_blank"><i class="fab fa-linkedin-square"></i> LinkedIn</a>
+                <i class="fab fa-linkedin-square"></i><a href="https://www.linkedin.com/in/jooyeong-kim-775049274/" target="_blank">LinkedIn</a>
               </div>
               <div class="contact-line">
-                <a href="http://jspirit01.github.io/CV" target="_blank"><i class="fa fa-solid fa-file"></i> <u>Curriculum Vitae</u></a>
+                <i class="fa fa-file"></i><a href="http://jspirit01.github.io/CV" target="_blank"><u>Curriculum Vitae</u></a>
               </div>
 
               <!-- <div class=contact-line>
@@ -83,11 +86,12 @@
             <Home :nightMode="nightMode"/>
             <!-- <About id="about" :nightMode="nightMode" /> -->
             <!-- <Skills id="skills" :nightMode="nightMode" /> -->
-            <Recommendation id="recommendation"  :nightMode="nightMode"/>
-            <Patent id="patent" :nightMode="nightMode" />
-            <Portfolio id="portfolio" :nightMode="nightMode" />
+            <!-- <Recommendation id="recommendation"  :nightMode="nightMode"/> -->
             <Update id="update" :nightMode="nightMode"/>
             <Publication id="publication" :nightMode="nightMode"/>
+            <Patent id="patent" :nightMode="nightMode" />
+            <Portfolio id="portfolio" :nightMode="nightMode" />
+
             <!--<Contact id="contact" :nightMode="nightMode" /> -->
             
 
@@ -98,6 +102,7 @@
       </div>
     </div>
     <Footer :nightMode="nightMode" />
+    
   </div>
 </template>
 
@@ -179,7 +184,7 @@ export default {
 @import "https://use.fontawesome.com/releases/v5.12.1/css/all.css";
 
 #app {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -439,14 +444,19 @@ html, body {
     display: flex;
     align-items: center; /* 아이콘과 텍스트 정렬 */
     font-size: 0.8rem; /* 글씨 크기 통일 */
+    gap: 8px; /* 아이콘과 텍스트 사이 일정한 공백 */
+}
+
+.contact-line span {
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 .contact-line a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit; /* 기본 텍스트 색상 유지 */
-    gap: 8px; /* 아이콘과 텍스트 사이 일정한 공백 */
+  text-decoration: none;
+  color: inherit; /* 기본 텍스트 색상 유지 */
 }
 
 .contact-line i {
@@ -455,7 +465,7 @@ html, body {
     text-align: center; /* 아이콘 정렬 */
 }
 
-
+/* 
 .publication-list .publication-line {
   margin-top: 14px;
   margin-bottom: 1rem;
@@ -474,7 +484,7 @@ html, body {
 .publication-list .publication-line .journal{
   padding-bottom: 0.3rem;
   font-weight: 500;
-}
+} */
 
 .cats-link:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497b7 0%, #fdf497a8 5%, #fd5849a1 45%, #d6249ea1 60%, #2859ebb6 90%);

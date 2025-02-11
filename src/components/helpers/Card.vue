@@ -1,5 +1,5 @@
 <template>
-  <div class="my-3 mx-3">
+  <div class="my-2 mx-1">
     <div
       class="card smcard"
       :class="{
@@ -7,8 +7,9 @@
         pcard: !nightMode,
         'bg-dark3': nightMode,
       }"
+      @click.prevent="showModal"
     >
-      <div style="height: 180px;">
+      <div >
         <img
           class="card-img-top"
           :src="portfolio.pictures[0].img"
@@ -16,11 +17,11 @@
         />
       </div>
       <div class="card-body pborder-top">
-        <h5 class="title2">{{ portfolio.name }}</h5>
+        <h5 class="card-title2">{{ portfolio.name }}</h5>
         <div>
           <div class="pb-1 bheight">
             <span
-              class="badge mr-2 mb-2 "
+              class="badge mr-2 mb-1 "
               v-for="tech in portfolio.technologies"
               :key="tech"
               :class="{ 'bg-dark4': nightMode }"
@@ -28,23 +29,23 @@
             >
           </div>
           <p
-            class="title3 m-0 pb-2 pheight pt-1"
+            class="card-title3 m-0 pheight"
             v-html="
               portfolio.description.length > 100
-                ? portfolio.description.substring(0, 105) + '...'
+                ? portfolio.description.substring(0, 300) + '...'
                 : portfolio.description
             "
           >
           </p>
         </div>
-        <div class="text-center mt-2">
-          <button
+        <div class="text-center">
+          <!-- <button
             href=""
             class="btn-sm btn btn-outline-secondary no-outline"
             @click.prevent="showModal"
           >
             read more
-          </button>
+          </button> -->
           <button
             href="#"
             class="btn-sm btn btn-outline-secondary no-outline ml-4"
@@ -82,12 +83,18 @@ export default {
 </script>
 
 <style scoped>
+
+.card-img-top {
+  width: 100%;  /* 카드의 너비에 맞춰 자동 조절 */
+  height: 300px;
+  object-fit: cover;
+}
 img {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   /* max-width: 100%;
-  max-height: 100%; */  
-  width: 100%; /*꽉채우기*/
+  max-height: 100%;  */
+  width: 100%; 
   height: 100%;
   object-fit: cover;
 }
@@ -108,16 +115,16 @@ img {
 }
 
 .pheight {
-  height: 110px;
-  max-height: 130px;
+  height: 100px;
+  max-height: 100px;
   overflow: auto;
   text-align: justify;
 }
 
 div.img-div {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 .pborder-top {
   border-top: 1px solid rgb(193, 193, 193);
@@ -129,13 +136,14 @@ div.img-div {
   border: none;
   box-shadow: 1px 1px 12px rgb(233, 233, 233);
   transition: all 0.5s;
-  height: 460px;
+  height: 550px;
 }
 
 .pcard:hover {
   transition: all 0.5s;
-  /* cursor: pointer; */
-  box-shadow: 1px 1px 15px rgb(216, 216, 216);
+  cursor: pointer;
+  box-shadow: 1px 1px 15px rgb(195, 195, 195);
+
 }
 
 .pcard-dark {
@@ -144,13 +152,13 @@ div.img-div {
   background-color: #30363a !important;
   /* box-shadow: 1px 1px 12px rgb(53, 53, 53); */
   transition: all 0.5s;
-  height: 460px;
+  height: 550px;
 }
 
 .pcard-dark:hover {
   transition: all 0.5s;
-  /* cursor: pointer; */
-  box-shadow: 1px 1px 12px rgb(53, 53, 53);
+  cursor: pointer;
+  box-shadow: 1px 1px 12px rgb(124, 124, 124);
 }
 
 .pcard-body {
@@ -168,13 +176,13 @@ div.img-div {
   font-weight: 400;
 }
 
-.title2 {
-  font-size: 20px;
-  font-weight: 400;
+.card-title2 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.title3 {
-  font-size: 16px;
+.card-title3 {
+  font-size: 0.9rem;
   font-weight: 400;
 }
 

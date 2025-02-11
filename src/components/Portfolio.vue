@@ -49,7 +49,7 @@
           <br />
           <div class="row">
             <div
-              class="col-xl-6 col-bg-12 col-md-12 col-sm-12"
+              class="col-xl-12 col-bg-12 col-md-12 col-sm-12"
               v-for="(portfolio, idx) in portfolio_info"
               :key="portfolio.name"
             >
