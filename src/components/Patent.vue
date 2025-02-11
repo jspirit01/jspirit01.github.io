@@ -4,7 +4,7 @@
       data-aos="fade"
       data-aos-once="true"
       data-aos-duration="1000">
-      <span>Patents</span>
+      <span>Patent</span>
     </div>
     <div class="patent-list">
       <div class="patent-line" 

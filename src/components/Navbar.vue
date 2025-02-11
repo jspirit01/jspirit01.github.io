@@ -68,6 +68,15 @@
             <li class="nav-item mx-2 ">
               <a
                 class="nav-link"
+                href="/patent"
+                @click.prevent="$emit('scroll', 'patent')"
+                :class="{ 'text-light': nightMode }"
+                >patent</a
+              >
+            </li>
+            <li class="nav-item mx-2 ">
+              <a
+                class="nav-link"
                 href="/portfolio"
                 @click.prevent="$emit('scroll', 'portfolio')"
                 :class="{ 'text-light': nightMode }"
@@ -103,15 +112,15 @@
               >scholar
               </a> -->
             <!-- </li> -->
-            <li class="nav-item ml-2">
-              <!-- <button
+            <!-- <li class="nav-item ml-2">
+              <button
                 class="btn btn-outline-secondary mx-2"
                 @click="open('github')"
                 v-tooltip.bottom="'GitHub'"
                 :class="{ 'text-light': nightMode }"
               >
                 <i class="fab fa-github"></i>
-              </button> -->
+              </button>
               <a
                 class="nav-link"
                 href="#"
@@ -120,7 +129,7 @@
                 :class="{ 'text-light': nightMode }"
               >github
               </a>
-            </li>
+            </li> -->
             <!-- <li class="nav-item ml-2">
               <a
                 class="nav-link"
@@ -131,7 +140,7 @@
               >resume
               </a>
             </li> -->
-            <li class="nav-item ml-2">
+            <!-- <li class="nav-item ml-2">
               <a
                 class="nav-link"
                 href="#"
@@ -141,7 +150,7 @@
                 style="color:#ac255d"
               >scilab
               </a>
-            </li>
+            </li> -->
             <li class="nav-item ml-2">
               <a
                 class="nav-link"

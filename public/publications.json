@@ -14,6 +14,7 @@
           "authors": "JooYeong Kim, Jin-Hyuk Hong",
           "journal": "ACM CHI 2025 (Full Paper) (conditionally accepted)",
           "paper_link": "https://doi.org/10.1145/3706598.3713911",
+          "dataset_link": "https://github.com/jspirit01/sound-to-onomatopoeia",
           "citations": 0
         },
         {
@@ -57,7 +58,7 @@
     {
       "domestics": [
         {
-          "title": "A Study of Non-speech Sound Recognition using Onomatopoeic Representations.",
+          "title": "A Study of Non-speech Sound Recognition using Onomatopoeic Representations",
           "authors": "JooYeong Kim, Jin-Hyuk Hong",
           "journal": "Korea Software Congress (KSC) 2024",
           "citations": 0

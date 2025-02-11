@@ -21,11 +21,13 @@
         >
           <div class="title">{{ pub.title }}</div>
           <!-- HTML 태그 포함을 위해 v-html 사용 -->
-          <div class="authors" v-html="pub.authors"></div>
+          <!-- <div class="authors" v-html="pub.authors"></div> -->
+          <div class="authors" v-html="formatAuthors(pub.authors)"></div>
           <div class="journal">
             {{ pub.journal }}
             <a :href="pub.paper_link" target="_blank" class="paper-box">paper</a> 
             <a v-if="pub.video_link" :href="pub.video_link" target="_blank" class="paper-box">video</a>
+            <a v-if="pub.dataset_link" :href="pub.dataset_link" target="_blank" class="paper-box">dataset</a>
             <!-- 인용 수가 0보다 클 때만 표시 -->
             <span class="citations pgray" v-if="pub.citations > 0">
                 cited by {{ pub.citations }}
@@ -51,7 +53,8 @@
           data-aos-mirror="true"
         >
           <div class="title">{{ pub.title }}</div>
-          <div class="authors" v-html="pub.authors"></div>
+          <!-- <div class="authors" v-html="pub.authors"></div> -->
+          <div class="authors" v-html="formatAuthors(pub.authors)"></div>
           <div class="journal">
             {{ pub.journal }}
           </div> 
@@ -79,6 +82,13 @@
         international: [],
         domestic: []
       };
+    },
+    methods: {
+      // authors 문자열 내에서 "JooYeong Kim"을 찾아 <u> 태그로 감싸 반환
+      formatAuthors(authors) {
+        // 정규표현식을 사용하여 모든 "JooYeong Kim" 텍스트를 찾습니다.
+        return authors.replace(/JooYeong Kim/g, '<u>JooYeong Kim</u>');
+      }
     },
     mounted() {
       // public 폴더의 publications.json 파일을 불러옴
@@ -108,7 +118,7 @@
   .publication-list .publication-line .title {
     font-size: 16px;
     padding-bottom: 0.3rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .publication-list .publication-line .authors {
     padding-bottom: 0.3rem;

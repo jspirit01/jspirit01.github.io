@@ -48,6 +48,9 @@
                 <i class="fab fa-linkedin-square"></i><a href="https://www.linkedin.com/in/jooyeong-kim-775049274/" target="_blank">LinkedIn</a>
               </div>
               <div class="contact-line">
+                <i class="fab fa-github"></i><a href="https://github.com/jspirit01" target="_blank">GitHub</a>
+              </div>
+              <div class="contact-line">
                 <i class="fa fa-file"></i><a href="http://jspirit01.github.io/CV" target="_blank"><u>Curriculum Vitae</u></a>
               </div>
 
@@ -150,7 +153,7 @@ export default {
     }
   },
   mounted() {
-    ["about", "recommendation", "publication", "contact", "skills", "portfolio"].forEach((l) => {
+    ["about", "recommendation", "publication", "patent", "skills", "portfolio"].forEach((l) => {
       if (window.location.href.includes(l)) {
         var elementPosition = document.getElementById(l).offsetTop;
         window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
@@ -182,6 +185,7 @@ export default {
 
 <style>
 @import "https://use.fontawesome.com/releases/v5.12.1/css/all.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 #app {
   font-family: "Poppins", sans-serif;
@@ -443,7 +447,7 @@ html, body {
 .contact-line {
     display: flex;
     align-items: center; /* 아이콘과 텍스트 정렬 */
-    font-size: 0.8rem; /* 글씨 크기 통일 */
+    font-size: 0.9rem; /* 글씨 크기 통일 */
     gap: 8px; /* 아이콘과 텍스트 사이 일정한 공백 */
 }
 
