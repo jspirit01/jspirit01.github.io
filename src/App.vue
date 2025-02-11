@@ -150,7 +150,7 @@ export default {
     }
   },
   mounted() {
-    ["about", "recommendation", "contact", "skills", "portfolio"].forEach((l) => {
+    ["about", "recommendation", "publication", "contact", "skills", "portfolio"].forEach((l) => {
       if (window.location.href.includes(l)) {
         var elementPosition = document.getElementById(l).offsetTop;
         window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
