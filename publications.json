@@ -1,17 +1,98 @@
-[
-  {
-    "title": "Visible Nuances: A Caption System to Visualize Paralinguistic Speech Cues for Deaf and Hard-of-Hearing Individuals",
-    "authors": "<u>JooYeong Kim*</u>, Sooyeon Ahn*, Jin-Hyuk Hong (*contributed equally)",
-    "journal": "ACM CHI 2023 (Full Paper)",
-    "paper_link": "https://dl.acm.org/doi/10.1145/3544548.3581130",
-    "video_link": "https://youtu.be/-DTB85q03Cc",
-    "citations": 11
-  },
-  {
-    "title": "Interactive Description to Enhance Accessibility and Experience of Deaf and Hard-of-Hearing Individuals in Museums",
-    "authors": "<u>JooYeong Kim</u>, ChungHa Lee, JuYeon Kim, Jin-Hyuk Hong",
-    "journal": "Universal Access in the Information Society",
-    "paper_link": "https://link.springer.com/epdf/10.1007/s10209-023-00983-2?sharing_token=...",
-    "citations": 11
-  }
-]
+{
+  "publications": [
+    {
+      "international": [
+        {
+          "title": "Pre-AttentiveGaze: gaze-based authentication dataset with momentary visual interactions",
+          "authors": "Junryeol Jeon, Yeo-Gyeong Noh, JooYeong Kim, Jin-Hyuk Hong",
+          "journal": "Scientific Data (accepted)",
+          "paper_link": "https://doi.org/10.1038/s41597-025-04538-3",
+          "citations": 0
+        },
+        {
+          "title": "OnomaCap: Making Non-speech Sound Captions Accessible and Enjoyable through Onomatopoeic Sound Representation",
+          "authors": "JooYeong Kim, Jin-Hyuk Hong",
+          "journal": "ACM CHI 2025 (Full Paper) (conditionally accepted)",
+          "paper_link": "https://doi.org/10.1145/3706598.3713911",
+          "citations": 0
+        },
+        {
+          "title": "Visualizing Speech Styles in Captions for Deaf and Hard-of-Hearing Viewers",
+          "authors": "Sooyeon Ahn*, JooYeong Kim*, Choonsung Shin, Jin-Hyuk Hong (*contributed equally)",
+          "journal": "International Journal of Human-Computer Studies",
+          "paper_link": "https://doi.org/10.1016/j.ijhcs.2024.103386",
+          "citations": 0
+        },
+        {
+          "title": "Visible Nuances: A Caption System to Visualize Paralinguistic Speech Cues for Deaf and Hard-of-Hearing Individuals",
+          "authors": "JooYeong Kim*, Sooyeon Ahn*, Jin-Hyuk Hong (*contributed equally)",
+          "journal": "ACM CHI 2023 (Full Paper)",
+          "paper_link": "https://dl.acm.org/doi/10.1145/3544548.3581130",
+          "video_link": "https://youtu.be/-DTB85q03Cc",
+          "citations": 11
+        },
+        {
+          "title": "Interactive Description to Enhance Accessibility and Experience of Deaf and Hard-of-Hearing Individuals in Museums",
+          "authors": "JooYeong Kim, ChungHa Lee, JuYeon Kim, Jin-Hyuk Hong",
+          "journal": "Universal Access in the Information Society",
+          "paper_link": "https://link.springer.com/epdf/10.1007/s10209-023-00983-2?sharing_token=OGtpplPiVV7CSdIpCHs75Pe4RwlQNchNByi7wbcMAY4x7a0OAnpvzHK6_58p_MYjIVK_I2mEQS0IYv-JzyEUpw3fGui49RakYfVrbNvXQNAqzdih-LvN6jS3ZnhfASwk0QCqVZ6igRxPMohCwVIXcghHKyLsJUcr21AsPjGeWF4%3D",
+          "citations": 11
+        },
+        {
+          "title": "Immersion Measurement in Watching Videos Using Eye-tracking Data",
+          "authors": "Youjin Choi*, JooYeong Kim*, Jin-Hyuk Hong (*contributed equally)",
+          "journal": "IEEE Transaction on Affective Computing",
+          "paper_link": "https://doi.org/10.1109/TAFFC.2022.3209311",
+          "citations": 12
+        },
+        {
+          "title": "We Play and Learn Rhythmically: Gesture-based Rhythm Game for Children with Intellectual Developmental Disabilities to Learn Manual Sign",
+          "authors": "Youjin Choi*, JooYeong Kim*, ChanWoo Park, JeongYoun Kim, Ji Hyun Yi, Jin-Hyuk Hong (*contributed equally)",
+          "journal": "ACM CHI 2022 (Full Paper)",
+          "paper_link": "https://dl.acm.org/doi/10.1145/3491102.3517456",
+          "citations": 9
+        }
+      ]
+    },
+    {
+      "domestics": [
+        {
+          "title": "A Study of Non-speech Sound Recognition using Onomatopoeic Representations.",
+          "authors": "JooYeong Kim, Jin-Hyuk Hong",
+          "journal": "Korea Software Congress (KSC) 2024",
+          "citations": 10
+        },
+        {
+          "title": "A Study of Sound Balloon Generation System using Multimodal ChatGPT for Sound Accessibility",
+          "authors": "JooYeong Kim, Jin-Hyuk Hong",
+          "journal": "Korea Software Congress (KSC) 2024",
+          "citations": 0
+        },
+        {
+          "title": "Understanding of Ceramic Image Classification based on Deep Learning",
+          "authors": "DaeHo Lee, In-Taek Jung, JunDoo Choi, JooYeong Kim, JuYeon Kim, Jin-Hyuk Hong",
+          "journal": "Korea Software Congress (KSC) 2021",
+          "citations": 10
+        },
+        {
+          "title": "Gesture-based Rhythm Game for Learning Sign Language of Children with Severe Developmental Disabilities",
+          "authors": "JooYeong Kim, Youjin Choi, In-Taek Jung, JiHyun Yi, Jeongyeon Kim, Jin-Hyuk Hong",
+          "journal": "Korea Society for Augmentative and Alternative Communication (KSAAC) 2020",
+          "citations": 9
+        },
+        {
+          "title": "Communication Education System Based on Gesture Recognition for Children with Severe Developmental Disabilities",
+          "authors": "In-Taek Jung, Youjin Choi, JooYeong Kim, Jeongyoun Kim, Jin-Hyuk Hong",
+          "journal": "Korea Software Congress (KSC) 2020",
+          "citations": 27
+        },
+        {
+          "title": "A Comparative Study on the Performance of Speech Recognition for a Speech Interface in a Filming Environment",
+          "authors": "Sanghun Jeon, Youjin Choi, JooYeong Kim, Albert Deokyoung Yang, Mun Sang Kim, Jin-Hyuk Hong",
+          "journal": "Korea Computer Congress (KCC) 2019",
+          "citations": 185
+        }
+      ]
+    }
+  ]
+}
