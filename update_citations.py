@@ -3,7 +3,7 @@ import json
 from scholarly import scholarly
 
 # JSON 파일 경로 (public 폴더 안에 저장한 경우)
-FILE_PATH = 'dist/publications.json'
+FILE_PATH = 'public/publications.json'
 
 # JSON 파일 읽기
 with open(FILE_PATH, 'r', encoding='utf-8') as f:
