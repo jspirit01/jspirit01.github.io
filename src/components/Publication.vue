@@ -54,10 +54,10 @@
           <div class="journal">
             {{ pub.journal }}
           </div> 
-            <a v-if="pub.paper_link" :href="pub.paper_link" target="_blank">[paper] </a>
-            <span class="citations" v-if="pub.citations > 0">
+            <a v-if="pub.paper_link" :href="pub.paper_link" target="_blank" class="paper-box">paper</a>
+            <!-- <span class="citations" v-if="pub.citations > 0">
              Citations: {{ pub.citations }}
-            </span>
+            </span> -->
           
         </div>
       </div>
@@ -131,7 +131,7 @@
   padding: 0px 3px;
   font-size: 0.8rem;
   /* text-decoration: none; */
-  
+
 }
   </style>
   
