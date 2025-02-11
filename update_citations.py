@@ -27,7 +27,7 @@ for pub in publications:
         pub['citations'] = 0
 
     # Google Scholar 차단을 방지하기 위해 요청 사이에 대기 (필요시 시간 조절)
-    time.sleep(3)
+    time.sleep(10)
 
 # 업데이트된 데이터를 JSON 파일에 덮어쓰기
 with open(FILE_PATH, 'w', encoding='utf-8') as f:
