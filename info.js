@@ -9,7 +9,7 @@ let info = {
     }
   },
   description:
-    "I am a Ph.D. student in the Soft Computing & Interaction (SCI) Laboratory at GIST, where I am advised by <a href=\"https://scholar.google.com/citations?user=iTu5G9QAAAAJ&hl=en\" style=\"text-decoration: none;\" target=\"_blank\">Jin-Hyuk Hong</a>. My research focuses on human-centered AI interaction systems that enhance usability and accessibility. I identify the problems people encounter and develop systems to support them effectively. I enjoy leveraging recent AI technology in my systems and exploring how AI can practically support human.",
+    "I am a Ph.D. student in the <a href=\"https://sci.gist.ac.kr\" style=\"text-decoration: none;\" target=\"_blank\">Soft Computing & Interaction (SCI) Laboratory</a> at GIST, where I am advised by <a href=\"https://scholar.google.com/citations?user=iTu5G9QAAAAJ&hl=en\" style=\"text-decoration: none;\" target=\"_blank\">Jin-Hyuk Hong</a>. My research focuses on human-centered AI interaction systems that enhance usability and accessibility. I identify the problems people encounter and develop systems to support them effectively. I enjoy leveraging recent AI technology in my systems and exploring how AI can practically support human.",
   links: {
     scholar: "https://scholar.google.com/citations?user=8GXb90gAAAAJ",
     github: "https://github.com/jspirit01",
