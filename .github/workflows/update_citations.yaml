@@ -1,0 +1,44 @@
+name: Update Citations and Deploy
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 매일 자정 실행
+  workflow_dispatch:
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: pip install scholarly
+
+      - name: Update citations
+        run: python update_citations.py
+
+      - name: Commit citation updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/publications.json
+          git diff-index --quiet HEAD || git commit -m "Update citation counts"
+          
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
