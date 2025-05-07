@@ -9,17 +9,21 @@
             <div class="subtitle"><span>About me</span></div>
             <div class="bio-list">
               <div class="bio-line">
-                <div class="period">Feb. 2019 - Now</div>
-                <div class="position">Ph.D candidate<br>School of Integrated Technology</div>
+                <div class="period">2025.02 - Now</div>
+                <div class="position">Postdoctoral Researcher<br>in Department of AI Convergence</div>
                 <div class="affiliation">GIST, Republic of Korea</div>
               </div>
               <div class="bio-line">
-                <div class="period">Mar. 2014 - 2019</div>
+                <div class="period">2019.03 - 2025.02</div>
+                <div class="position">Ph.D in School of Integrated Technology</div>
+                <div class="affiliation">GIST, Republic of Korea</div>
+              </div>
+              <div class="bio-line">
+                <div class="period">2014.03 - 2019.02</div>
                 <div class="position">B.S in Computer Engineering</div>
                 <div class="affiliation">Hongik University, Republic of Korea</div>
               </div>
             </div>
-
 
             <div class="contact-list">
               <div class="contact-line">
@@ -57,7 +61,8 @@
               <!-- <div class=contact-line>
                 <a href="https://www.instagram.com/popomimicats/">@popomimicats</a>
               </div> -->
-               
+
+
             </div>
            
 

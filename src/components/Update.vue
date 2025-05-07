@@ -41,6 +41,10 @@ export default {
       showAll: false,
       // 업데이트 항목 배열 (최신순 정렬)
       updates: [
+      {
+          date: "2025.04.28.",
+          headline: "Had a great time presenting CHI 2025 in Yokohama, Japan 🇯🇵 🎏 ",
+        },
         {
           date: "2025.02.05.",
           headline: "Had a great experience presenting my thesis research at a NAVER Tech Talk! 🙂",
