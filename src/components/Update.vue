@@ -43,7 +43,7 @@ export default {
       updates: [
       {
           date: "2025.04.28.",
-          headline: "Had a great time presenting CHI 2025 in Yokohama, Japan 🇯🇵 🎏 ",
+          headline: "Had a great time attending CHI 2025 in Yokohama, Japan 🇯🇵 🎏 ",
         },
         {
           date: "2025.02.05.",
