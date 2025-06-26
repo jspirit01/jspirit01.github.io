@@ -41,7 +41,11 @@ export default {
       showAll: false,
       // 업데이트 항목 배열 (최신순 정렬)
       updates: [
-      {
+        {
+          date: "2025.06.18.",
+          headline: "Our paper has been accepted to <i>ASSETS 2025</i>: \"CuCap: Comparative Analysis of Customized Captioning between North American and South Korean d/Deaf and Hard-of-Hearing Users.\"",
+        },
+        {
           date: "2025.04.28.",
           headline: "Had a great time attending CHI 2025 in Yokohama, Japan 🇯🇵 🎏 ",
         },
