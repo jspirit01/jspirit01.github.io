@@ -3,16 +3,22 @@
     {
       "international": [
         {
+          "title": "CuCap: Comparative Analysis of Customized Captioning between North American and South Korean d/Deaf and Hard-of-Hearing Users",
+          "authors": "Calua de Lacerda Pataca, SooYeon Ahn, Suhyeon Yoo, JooYeong Kim, Khai N. Truong, Jin-Hyuk Hong, Roshan L Peiris, Matt Huenerfauth",
+          "journal": "ASSETS '25: Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility (accepted)",
+          "citations": 0
+        },
+        {
           "title": "Pre-AttentiveGaze: gaze-based authentication dataset with momentary visual interactions",
           "authors": "Junryeol Jeon, Yeo-Gyeong Noh, JooYeong Kim, Jin-Hyuk Hong",
-          "journal": "Scientific Data (accepted)",
+          "journal": "Scientific Data",
           "paper_link": "https://doi.org/10.1038/s41597-025-04538-3",
           "citations": 0
         },
         {
           "title": "OnomaCap: Making Non-speech Sound Captions Accessible and Enjoyable through Onomatopoeic Sound Representation",
           "authors": "JooYeong Kim, Jin-Hyuk Hong",
-          "journal": "ACM CHI 2025 (Full Paper) (conditionally accepted)",
+          "journal": "CHI '25: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://doi.org/10.1145/3706598.3713911",
           "dataset_link": "https://github.com/jspirit01/sound-to-onomatopoeia",
           "citations": 0
@@ -27,7 +33,7 @@
         {
           "title": "Visible Nuances: A Caption System to Visualize Paralinguistic Speech Cues for Deaf and Hard-of-Hearing Individuals",
           "authors": "JooYeong Kim*, Sooyeon Ahn*, Jin-Hyuk Hong (*contributed equally)",
-          "journal": "ACM CHI 2023 (Full Paper)",
+          "journal": "CHI '23: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://dl.acm.org/doi/10.1145/3544548.3581130",
           "video_link": "https://youtu.be/-DTB85q03Cc",
           "citations": 0
@@ -49,7 +55,7 @@
         {
           "title": "We Play and Learn Rhythmically: Gesture-based Rhythm Game for Children with Intellectual Developmental Disabilities to Learn Manual Sign",
           "authors": "Youjin Choi*, JooYeong Kim*, ChanWoo Park, JeongYoun Kim, Ji Hyun Yi, Jin-Hyuk Hong (*contributed equally)",
-          "journal": "ACM CHI 2022 (Full Paper)",
+          "journal": "CHI '22: Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://dl.acm.org/doi/10.1145/3491102.3517456",
           "citations": 0
         }
