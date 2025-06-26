@@ -20,7 +20,7 @@
         data-aos-mirror="true">
         <div class="title">Pre-AttentiveGaze: gaze-based authentication dataset with momentary visual interactions</div>
         <div class="authors">Junryeol Jeon, Yeo-Gyeong Noh, <u>JooYeong Kim</u>, Jin-Hyuk Hong</div>
-        <div class="journal">Scientific Data <i>(accepted)</i> <a href="https://doi.org/10.1038/s41597-025-04538-3" target="_blank">[paper]</a></div>
+        <div class="journal">Scientific Data <a href="https://doi.org/10.1038/s41597-025-04538-3" target="_blank">[paper]</a></div>
         <!-- <div class="doi"><a href="">[paper]</a></div> -->
       </div>
       <div class="publication-line" 

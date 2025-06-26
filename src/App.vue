@@ -9,7 +9,7 @@
             <div class="subtitle"><span>About me</span></div>
             <div class="bio-list">
               <div class="bio-line">
-                <div class="period">2025.02 - Now</div>
+                <div class="period">2025.03 - Now</div>
                 <div class="position">Postdoctoral Researcher<br>in Department of AI Convergence</div>
                 <div class="affiliation">GIST, Republic of Korea</div>
               </div>
