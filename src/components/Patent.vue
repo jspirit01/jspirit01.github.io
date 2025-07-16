@@ -12,6 +12,16 @@
         data-aos-once="true"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true">
+        <div class="title">Apparatus and method for transcribing sound to onomatopoeic expression</div>
+        <div class="inventor">Jin-Hyuk Hong, <u>JooYeong Kim</u></div>
+        <div class="number">Korea Patent Application No. 10-2025-0085105</div>
+        <!-- <div class="doi"><a href="">[paper]</a></div> -->
+      </div>
+      <div class="patent-line" 
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true">
         <div class="title">Measuring apparatus and method for visualize voice information</div>
         <div class="inventor">Jin-Hyuk Hong, <u>JooYeong Kim</u>, SooYeon Ahn</div>
         <div class="number">Korea Patent Application No. 10-2023-0101066</div>
