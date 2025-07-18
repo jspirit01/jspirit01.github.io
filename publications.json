@@ -6,7 +6,7 @@
           "title": "CuCap: Comparative Analysis of Customized Captioning between North American and South Korean d/Deaf and Hard-of-Hearing Users",
           "authors": "Calua de Lacerda Pataca, SooYeon Ahn, Suhyeon Yoo, JooYeong Kim, Khai N. Truong, Jin-Hyuk Hong, Roshan L Peiris, Matt Huenerfauth",
           "journal": "ASSETS '25: Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility (accepted)",
-          "citations": 0
+          "citations": 82
         },
         {
           "title": "Pre-AttentiveGaze: gaze-based authentication dataset with momentary visual interactions",
@@ -36,28 +36,28 @@
           "journal": "CHI '23: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://dl.acm.org/doi/10.1145/3544548.3581130",
           "video_link": "https://youtu.be/-DTB85q03Cc",
-          "citations": 0
+          "citations": 24
         },
         {
           "title": "Interactive Description to Enhance Accessibility and Experience of Deaf and Hard-of-Hearing Individuals in Museums",
           "authors": "JooYeong Kim, ChungHa Lee, JuYeon Kim, Jin-Hyuk Hong",
           "journal": "Universal Access in the Information Society",
           "paper_link": "https://link.springer.com/epdf/10.1007/s10209-023-00983-2?sharing_token=OGtpplPiVV7CSdIpCHs75Pe4RwlQNchNByi7wbcMAY4x7a0OAnpvzHK6_58p_MYjIVK_I2mEQS0IYv-JzyEUpw3fGui49RakYfVrbNvXQNAqzdih-LvN6jS3ZnhfASwk0QCqVZ6igRxPMohCwVIXcghHKyLsJUcr21AsPjGeWF4%3D",
-          "citations": 0
+          "citations": 13
         },
         {
           "title": "Immersion Measurement in Watching Videos Using Eye-tracking Data",
           "authors": "Youjin Choi*, JooYeong Kim*, Jin-Hyuk Hong (*contributed equally)",
           "journal": "IEEE Transaction on Affective Computing",
           "paper_link": "https://doi.org/10.1109/TAFFC.2022.3209311",
-          "citations": 0
+          "citations": 16
         },
         {
           "title": "We Play and Learn Rhythmically: Gesture-based Rhythm Game for Children with Intellectual Developmental Disabilities to Learn Manual Sign",
           "authors": "Youjin Choi*, JooYeong Kim*, ChanWoo Park, JeongYoun Kim, Ji Hyun Yi, Jin-Hyuk Hong (*contributed equally)",
           "journal": "CHI '22: Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://dl.acm.org/doi/10.1145/3491102.3517456",
-          "citations": 0
+          "citations": 9
         }
       ]
     },
