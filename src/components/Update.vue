@@ -43,7 +43,7 @@ export default {
       updates: [
         {
           date: "2025.08.28.",
-          headline: "Awarded NRF Postdoctoral Fellowship (120,000,000 KRW ≈ 86,000 USD, 2 years). Excited to lead my first project as Principal Investigator!",
+          headline: "Awarded NRF Postdoctoral Fellowship (120,000,000 KRW ≈ 86,000 USD for 2 years). Excited to lead my first project as Principal Investigator!",
         },
         {
           date: "2025.08.21.",
