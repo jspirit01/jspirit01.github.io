@@ -42,6 +42,14 @@ export default {
       // 업데이트 항목 배열 (최신순 정렬)
       updates: [
         {
+          date: "2025.08.28.",
+          headline: "Awarded NRF Postdoctoral Fellowship (120,000,000 KRW ≈ 86,000 USD, 2 years). Excited to lead my first project as Principal Investigator!",
+        },
+        {
+          date: "2025.08.21.",
+          headline: "Enjoyed sharing my research and interacting with KAIST MACLab. Thank you for inviting me! 🙌",
+        },
+        {
           date: "2025.06.18.",
           headline: "Our paper has been accepted to <i>ASSETS 2025</i>: \"CuCap: Comparative Analysis of Customized Captioning between North American and South Korean d/Deaf and Hard-of-Hearing Users.\"",
         },
