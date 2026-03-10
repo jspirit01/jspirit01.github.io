@@ -4,7 +4,7 @@
       data-aos="fade"
       data-aos-once="true"
       data-aos-duration="1000">
-      <span>Update</span>
+      <span>News</span>
     </div>
     <div class="update-list">
       <!-- v-for를 통해 업데이트 항목 렌더링 -->
@@ -41,6 +41,14 @@ export default {
       showAll: false,
       // 업데이트 항목 배열 (최신순 정렬)
       updates: [
+        {
+          date: "2026.03.02.",
+          headline: "Our paper has been accepted to the <i>International Journal of Human-Computer Interaction</i>: \"Voice-Visualized Message Interactions on Smartwatches.\"",
+        },
+        {
+          date: "2026.01.01.",
+          headline: "Started a new position as a Senior Researcher at the Korea Culture Technology Institute (KCTI) at GIST",
+        },
         {
           date: "2025.08.28.",
           headline: "Awarded NRF Postdoctoral Fellowship (120,000,000 KRW ≈ 86,000 USD, 2 years). Excited to lead my first project as Principal Investigator!",
@@ -114,7 +122,7 @@ export default {
 }
 
 .update-list .update-line .date {
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 1rem;
   flex-shrink: 0;
   width: 80px;

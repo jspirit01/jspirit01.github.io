@@ -1,154 +1,26 @@
 <template>
   <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
     <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
-    <div :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }" class="p-st">
-      <div class="parent">
-        <div class="row">
-          <div class="left-pannel">
-            <img class="portrait" :src="picture" />
-            <div class="subtitle"><span>About me</span></div>
-            <div class="bio-list">
-              <div class="bio-line">
-                <div class="period">2025.03 - Now</div>
-                <div class="position">Postdoctoral Researcher<br>in Department of AI Convergence</div>
-                <div class="affiliation">GIST, Republic of Korea</div>
-              </div>
-              <div class="bio-line">
-                <div class="period">2019.03 - 2025.02</div>
-                <div class="position">Ph.D in School of Integrated Technology</div>
-                <div class="affiliation">GIST, Republic of Korea</div>
-              </div>
-              <div class="bio-line">
-                <div class="period">2014.03 - 2019.02</div>
-                <div class="position">B.S in Computer Engineering</div>
-                <div class="affiliation">Hongik University, Republic of Korea</div>
-              </div>
-            </div>
-
-            <div class="contact-list">
-              <div class="contact-line">
-                <i class="fa fa-solid fa-map-marker"></i><span>Republic of Korea</span>
-              </div>
-              <div class="contact-line">
-                <i class="fa fa-solid fa-envelope"></i><a href="mailto:scijspirit@gmail.com">scijspirit@gmail.com</a>
-                <!-- <span type="button" 
-                v-tooltip="{
-                    placement: 'right',
-                    content: 'click to copy',
-                    hideOnTargetClick: true,
-                    trigger: 'hover'
-                  }" 
-                v-clipboard:copy="email"
-              >jspirit01@gm.gist.ac.kr
-              </span> -->
-              </div>
-              <!-- <div class="contact-line">
-                <a href="mailto:jspirit01@gm.gist.ac.kr"><i class="fa fa-sharp fa-solid fa-envelope"></i> jspirit01@gm.gist.ac.kr</a>
-              </div> -->
-              <div class="contact-line">
-                <i class="fa fa-graduation-cap"></i><a href="https://scholar.google.com/citations?user=8GXb90gAAAAJ" target="_blank">Google Scholar</a>
-              </div>
-              <div class="contact-line">
-                <i class="fab fa-linkedin-square"></i><a href="https://www.linkedin.com/in/jooyeong-kim-775049274/" target="_blank">LinkedIn</a>
-              </div>
-              <div class="contact-line">
-                <i class="fab fa-github"></i><a href="https://github.com/jspirit01" target="_blank">GitHub</a>
-              </div>
-              <div class="contact-line">
-                <i class="fa fa-file"></i><a href="http://jspirit01.github.io/CV" target="_blank"><u>Curriculum Vitae</u></a>
-              </div>
-
-              <!-- <div class=contact-line>
-                <a href="https://www.instagram.com/popomimicats/">@popomimicats</a>
-              </div> -->
-
-
-            </div>
-           
-
-
-            <!-- <div class="subtitle"><span>Updates</span></div>
-              <div class="update-list">
-                <div class="update-line">
-                  <div class="date">2023.01.19.</div>
-                  <div class="headline">Our paper has been finally accepted to <i>Universal Access in the Information Society</i>: <span style="font-weight: 600;">"Interactive Description to Enhance Accessibility and Experience of Deaf and Hard-of-Hearing Individuals in Museums"</span>.</div>
-                </div>
-                <div class="update-line">
-                  <div class="date">2023.01.14.</div>
-                  <div class="headline">Our paper has been conditionally accepted to <i>CHI 2023</i>: <span style="font-weight: 600;">"Visible Nuances: A Caption System to Visualize Paralinguistic Speech Cues for Deaf and Hard-of-Hearing Individuals"</span>.</div>
-                </div>
-                <div class="update-line">
-                  <div class="date">2022.09.19.</div>
-                  <div class="headline">Our paper has been finally accepted to <i>IEEE Transaction on Affective Computing</i> (IF=13.99): <span style="font-weight: 600;">"Immersion Measurement in Watching Videos Using Eye-tracking Data"</span>.</div>
-                </div>
-                <div class="update-line">
-                  <div class="date">2022.02.10.</div>
-                  <div class="headline">Our paper has been conditionally accepted to <i>CHI 2022</i>: <span style="font-weight: 600;">"We Play and Learn Rhythmically: Gesture-based Rhythm Game for Children with Intellectual Developmental Disabilities to Learn Manual Sign"</span>.</div>
-                </div>
-              </div> -->
-
-
-          </div>
-
-          <div class="main-pannel">
-            <Home :nightMode="nightMode"/>
-            <!-- <About id="about" :nightMode="nightMode" /> -->
-            <!-- <Skills id="skills" :nightMode="nightMode" /> -->
-            <!-- <Recommendation id="recommendation"  :nightMode="nightMode"/> -->
-            <Update id="update" :nightMode="nightMode"/>
-            <Publication id="publication" :nightMode="nightMode"/>
-            <Patent id="patent" :nightMode="nightMode" />
-            <Portfolio id="portfolio" :nightMode="nightMode" />
-
-            <!--<Contact id="contact" :nightMode="nightMode" /> -->
-            
-
-          </div>
-        
-        </div>
-      
-      </div>
-    </div>
+    <router-view :nightMode="nightMode" />
     <Footer :nightMode="nightMode" />
-    
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
-import Recommendation from "./components/Recommendation";
-import Update from "./components/Update";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Patent from "./components/Patent";
-import Publication from "./components/Publication";
 import info from "../info";
-
 
 export default {
   name: "App",
   components: {
     Navbar,
-    Home,
-    About,
-    Skills,
-    Portfolio,
-    Recommendation,
-    Update,
-    Contact,
-    Footer,
-    Patent,
-    Publication
+    Footer
   },
   data() {
     return {
-      nightMode: false,
+      nightMode: true,
       config: info.config,
-      picture: info.flat_picture,
       email: "jspirit01@gm.gist.ac.kr"
     };
   },
@@ -156,14 +28,6 @@ export default {
     if (this.config.use_cookies) {
       this.nightMode = this.$cookie.get("nightMode") === "true" ? true : false;
     }
-  },
-  mounted() {
-    ["about", "recommendation", "publication", "patent", "skills", "portfolio"].forEach((l) => {
-      if (window.location.href.includes(l)) {
-        var elementPosition = document.getElementById(l).offsetTop;
-        window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
-      }
-    });
   },
   methods: {
     switchMode(mode) {
@@ -175,15 +39,19 @@ export default {
     scrollTo(ele) {
       if (ele == "home") {
         this.$router.push(`/`);
-        window.scrollTo({ top: -80, behavior: "smooth" });
-      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      else if (ele == "publication") {
+        this.$router.push(`/publication`);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      else {
         var elementPosition = document.getElementById(ele).offsetTop;
         window.scrollTo({ top: elementPosition - 35, behavior: "smooth" });
         if (this.$router.history.current.path !== `/${ele}`)
           this.$router.push(`/${ele}`);
       }
     }
-      
   }
 };
 </script>
@@ -191,9 +59,32 @@ export default {
 <style>
 @import "https://use.fontawesome.com/releases/v5.12.1/css/all.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+        font-family: 'Gilroy';
+        src: url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot');
+        src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+@font-face {
+        font-family: 'Gilroy';
+        src: url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot');
+        src: local('Gilroy Extrabold'), local('Gilroy-Extrabold'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.ttf') format('truetype');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
 
 #app {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -206,17 +97,45 @@ export default {
   }
 }
 
-html, body { 
-    overscroll-behavior: none; 
+html, body {
+    overscroll-behavior: none;
 }
 
+/* 컨테이너 - 최대 너비 제한과 중앙 정렬 */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* 메인 레이아웃 */
 .parent {
   display: flex;
-  margin-top: 38px;
+  gap: 3rem;
+  margin-top: 30px;
   padding-top: 5rem;
   position: relative;
-  margin-left: 15%;
-  margin-right: 15%;
+}
+
+/* 반응형 브레이크포인트 */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  .parent {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .parent {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .pgray {
@@ -224,11 +143,16 @@ html, body {
 }
 
 .pblue {
-  color: rgb(255, 112, 56);
+  /* color: rgb(255, 112, 56); */
+  color: #027BFF;
+}
+
+.bg-dark {
+  background-color: #000000 !important;
 }
 
 .bg-dark2 {
-  background-color: #262c30 !important;
+  background-color: #000000 !important;
 }
 
 .text-light {
@@ -239,26 +163,22 @@ html, body {
   transition: all 0.5s !important;
 }
 
-/* To set scrollbar width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 9px;
-  border: 2px solid white; /* Use your background color instead of White */
+  border: 2px solid white;
   background-clip: content-box;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 9px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -273,7 +193,6 @@ html, body {
   color: white;
   border-radius: 8px;
   font-size: 10px;
-  /* padding: 5px 10px 4px; */
 }
 
 .tooltip .tooltip-arrow {
@@ -370,132 +289,20 @@ html, body {
   transition: opacity 0.5s;
 }
 
-.portrait {
-  width: 300px;
-}
-
-.left-pannel {
-  width: 350px;
-  padding-right: 52.5px;
-  font-size: 12pt;
-  align-items: flex-start;
-}
-
-.main-pannel {
-  flex: 1 1;
-  padding-right: 35px;
-}
-
-.subtitle {
-  font-weight:700;
-  font-size:18px;
-  border-bottom: 1px solid #535a5e;
-  margin-bottom: 0.3rem;
-  margin-top:1.5rem;
-  justify-content: space-between;
-  padding-bottom: 0.3rem;
-}
-
-.maintitle {
-  font-weight:700;
-  font-size: 24px;
-  border-bottom: 1px solid #535a5e;
-  margin-top:1.5rem;
-  justify-content: space-between;
-  padding-bottom: 0.3rem;
-}
-
-.minititle {
-  font-weight:500;
-  font-size: 18px;
-  margin-top:2rem;
-  justify-content: space-between;
-  font-style: italic;
-}
-
-.bio-list .bio-line{
-  margin-bottom: 0.5rem;
-  font-size: .9rem;
-}
-
-.bio-list .bio-line .period {
-  font-weight: 600;
-}
-/* 
-.update-list .update-line{
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.update-list .update-line .date {
-  font-weight: 600;
-  font-size: 1rem;
-} */
-
-
-/* .contact-list {
-  margin-top: 1.5rem;
-}
-.contact-list .contact-line {
-  font-size: 0.8rem;
-} */
-
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
-    margin-top: 1.5rem;
-    gap: 5px; /*각 줄 사이의 간격*/
-}
-
-.contact-line {
-    display: flex;
-    align-items: center; /* 아이콘과 텍스트 정렬 */
-    font-size: 0.9rem; /* 글씨 크기 통일 */
-    gap: 8px; /* 아이콘과 텍스트 사이 일정한 공백 */
-}
-
-.contact-line span {
-    display: flex;
-    align-items: center;
-    
-    
-}
-
-.contact-line a {
-  text-decoration: none;
-  color: inherit; /* 기본 텍스트 색상 유지 */
-}
-
-.contact-line i {
-    font-size: 14px; /* 아이콘 크기 조정 */
-    width: 20px; 
-    text-align: center; /* 아이콘 정렬 */
-}
-
-/* 
-.publication-list .publication-line {
-  margin-top: 14px;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.publication-list .publication-line .title{
-  font-size: 16px;
-  padding-bottom: 0.3rem;
-  font-weight: 600;
-}
-.publication-list .publication-line .authors{
-  padding-bottom: 0.3rem;
-  font-weight: 400;
-}
-.publication-list .publication-line .journal{
-  padding-bottom: 0.3rem;
-  font-weight: 500;
-} */
-
 .cats-link:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497b7 0%, #fdf497a8 5%, #fd5849a1 45%, #d6249ea1 60%, #2859ebb6 90%);
 }
+
+.maintitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.minititle {
+  font-size: 22px;
+  margin-bottom: 20px;
+  /* font-style: italic; */
+  border-bottom: 1px solid #535a5e;
+}
+
 </style>

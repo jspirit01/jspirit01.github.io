@@ -7,7 +7,7 @@
     <div class="container py-1 pt-1">
       <!-- <div class="row pt-2 align-items-center"> -->
         
-    <span>© 2022-2025 JooYeong, a fork of original copyright 2020 <a href="https://github.com/hrishikeshpaul/portfolio-template?tab=readme-ov-file" target="_blank" >Hrishikesh Paul</a> | Licensed under MIT</span>
+    <span>© 2026 JooYeong. Last updated: March 10, 2026</span>
         <!-- <div
           class="col-xl-6 col-bg-6 col-md-6 col-sm-12 pbelow"
           style="color: white;"

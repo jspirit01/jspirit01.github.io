@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+import HomePage from './views/HomePage.vue'
+import PublicationPage from './views/PublicationPage.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -27,7 +29,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/'}
+  { path: '/', component: HomePage },
+  { path: '/publication', component: PublicationPage }
 ]
 
 const router = new VueRouter({

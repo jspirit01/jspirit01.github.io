@@ -38,12 +38,12 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-2">
+            <li class="nav-item mx-1">
               <a
                 class="nav-link"
                 href="/home"
-                @click.prevent="$emit('scroll', 'home')"
-                :class="{ 'text-light': nightMode }"
+                @click.prevent="handleHomeClick"
+                :class="{ 'text-light': nightMode, 'active-nav': isHomePage }"
                 >about</a
               >
             </li>
@@ -56,16 +56,16 @@
                 >skills</a
               >
             </li> -->
-            <li class="nav-item mx-2 ">
+            <li class="nav-item mx-1">
               <a
                 class="nav-link"
                 href="/publication"
-                @click.prevent="$emit('scroll', 'publication')"
-                :class="{ 'text-light': nightMode }"
+                @click.prevent="handlePublicationClick"
+                :class="{ 'text-light': nightMode, 'active-nav': isPublicationPage }"
                 >publication</a
               >
             </li>
-            <li class="nav-item mx-2 ">
+            <!-- <li class="nav-item mx-2 ">
               <a
                 class="nav-link"
                 href="/patent"
@@ -73,8 +73,8 @@
                 :class="{ 'text-light': nightMode }"
                 >patent</a
               >
-            </li>
-            <li class="nav-item mx-2 ">
+            </li> -->
+            <!-- <li class="nav-item mx-2 ">
               <a
                 class="nav-link"
                 href="/portfolio"
@@ -82,7 +82,7 @@
                 :class="{ 'text-light': nightMode }"
                 >project</a
               >
-            </li>
+            </li> -->
             <!-- 
             <li class="nav-item mx-2">
               <a
@@ -162,7 +162,7 @@
                     'fas fa-moon': nightMode,
                     'far fa-moon': !nightMode,
                   }"
-                  v-tooltip.bottom="nightMode ? 'Light Mode' : 'Night Mode'"
+                  
                 ></i
               ></a>
             </li>
@@ -198,10 +198,37 @@ export default {
   components: {
     Logo,
   },
+  computed: {
+    isHomePage() {
+      return this.$route.path === '/';
+    },
+    isPublicationPage() {
+      return this.$route.path === '/publication';
+    }
+  },
   methods: {
     switchMode() {
       this.localNightMode = !this.localNightMode;
       this.$emit("nightMode", this.localNightMode);
+    },
+    handleHomeClick() {
+      this.closeNavbar();
+      this.$emit('scroll', 'home');
+    },
+    handlePublicationClick() {
+      this.closeNavbar();
+      this.$router.push('/publication');
+      this.$emit('scroll', 'publication');
+    },
+    closeNavbar() {
+      // Bootstrap collapse 닫기
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    },
+    isActiveRoute(path) {
+      return this.currentPath === path;
     },
     open(link) {
       switch (link) {
@@ -228,6 +255,22 @@ export default {
   font-weight: 500;
 }
 
+.active-nav {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+  /* color: #FF7038 !important; */
+  
+}
+
+.active-nav:focus {
+  /* color: #FF7038 !important; */
+  outline: none;
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
 button {
   border: none;
   outline: none;
@@ -248,7 +291,7 @@ nav {
   backdrop-filter: blur(12px);
 }
 
-.recent-update-date{
+/* .recent-update-date{
   font-size:0.6rem;
-}
+} */
 </style>

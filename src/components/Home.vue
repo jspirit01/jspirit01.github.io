@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }"
-    class="pt-5 p-st"
+    class="p-st"
   >
     <div
       class="home-container"
@@ -9,14 +9,20 @@
       data-aos-once="true"
       data-aos-duration="1000"
     >
-      <span
-        class="home-title"
-        :class="{ pgray: !nightMode, 'text-light': nightMode }"
-        >Hi, I'm JooYeong Kim. </span
-      >
-      <div>
-        <p v-html="description"></p>
+      <!-- <p>
+        <span class="home-title" :class="{ pgray: !nightMode, 'text-light': nightMode }"><b>JooYeong</b> Kim</span>
+        <span class="home-subtitle" :class="{ pgray: !nightMode, 'text-light': nightMode }">HCI Researcher @ GIST</span>
+      </p> -->
+        <!-- <p v-html="description"></p> -->
+        <p>
+          Hi! I am a researcher in the Korea Culture Technology Institute at <a href="https://www.gist.ac.kr/en/main.html" style="text-decoration: none;" target="_blank">GIST</a>, Republic of Korea. My research focuses on human-centered AI systems that enhance usability and accessibility. I identify challenges people encounter in real-world contexts and develop systems that effectively support their needs. I enjoy applying recent AI technologies to my work and exploring how AI can practically support human. 
+        </p>
+        <p>
+          I received my Ph.D. from School of Integrated Technology at <a href="https://www.gist.ac.kr/en/main.html" style="text-decoration: none;" target="_blank">GIST</a>, where I was advised by Prof. <a href="https://scholar.google.com/citations?user=iTu5G9QAAAAJ&hl=en" style="text-decoration: none;" target="_blank">Jin-Hyuk Hong</a> in <a href="https://sci.gist.ac.kr/sci/" style="text-decoration: none;" target="_blank">SCILAB</a>.  
+        </p>
+        
       </div>
+      
       <!-- <div class="text-center pb-4">
         <button
           class="btn btn-outline-secondary mx-2 "
@@ -40,9 +46,8 @@
           <i class="fa fa-briefcase"></i>
         </button>
       </div> -->
-        
-    </div>
-    
+      
+
   </div>
 </template>
 
@@ -94,10 +99,16 @@ export default {
 </script>
 
 <style scoped>
-.home-title {
-  font-size: 28px;
-  font-weight: 500;
+/* .home-title {
+  font-size: 30px;
+  font-weight: 400;
+  display: block;
 }
+
+.home-subtitle {
+  font-weight: 500;
+
+} */
 
 img {
   max-width: 300px;
@@ -149,7 +160,7 @@ p {
 }
 
 .home-container {
-  padding: 0.3rem;
+  margin-bottom: 32px;
 }
 /* LEAVES */
 </style>
