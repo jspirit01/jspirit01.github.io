@@ -7,7 +7,7 @@
           "authors": "Calua de Lacerda Pataca, SooYeon Ahn, Suhyeon Yoo, JooYeong Kim, Khai N. Truong, Jin-Hyuk Hong, Roshan L Peiris, Matt Huenerfauth",
           "journal": "ASSETS '25: Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility (accepted)",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 4
         },
         {
           "title": "Pre-AttentiveGaze: gaze-based authentication dataset with momentary visual interactions",
@@ -15,7 +15,7 @@
           "journal": "Scientific Data",
           "paper_link": "https://doi.org/10.1038/s41597-025-04538-3",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 3
         },
         {
           "title": "OnomaCap: Making Non-speech Sound Captions Accessible and Enjoyable through Onomatopoeic Sound Representation",
@@ -24,7 +24,7 @@
           "paper_link": "https://doi.org/10.1145/3706598.3713911",
           "dataset_link": "https://github.com/jspirit01/sound-to-onomatopoeia",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 6
         },
         {
           "title": "Visualizing Speech Styles in Captions for Deaf and Hard-of-Hearing Viewers",
@@ -32,7 +32,7 @@
           "journal": "International Journal of Human-Computer Studies",
           "paper_link": "https://doi.org/10.1016/j.ijhcs.2024.103386",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 6
         },
         {
           "title": "Visible Nuances: A Caption System to Visualize Paralinguistic Speech Cues for Deaf and Hard-of-Hearing Individuals",
@@ -41,7 +41,7 @@
           "paper_link": "https://dl.acm.org/doi/10.1145/3544548.3581130",
           "video_link": "https://youtu.be/-DTB85q03Cc",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 31
         },
         {
           "title": "Interactive Description to Enhance Accessibility and Experience of Deaf and Hard-of-Hearing Individuals in Museums",
@@ -49,7 +49,7 @@
           "journal": "Universal Access in the Information Society",
           "paper_link": "https://link.springer.com/epdf/10.1007/s10209-023-00983-2?sharing_token=OGtpplPiVV7CSdIpCHs75Pe4RwlQNchNByi7wbcMAY4x7a0OAnpvzHK6_58p_MYjIVK_I2mEQS0IYv-JzyEUpw3fGui49RakYfVrbNvXQNAqzdih-LvN6jS3ZnhfASwk0QCqVZ6igRxPMohCwVIXcghHKyLsJUcr21AsPjGeWF4%3D",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 18
         },
         {
           "title": "Immersion Measurement in Watching Videos Using Eye-tracking Data",
@@ -57,7 +57,7 @@
           "journal": "IEEE Transaction on Affective Computing",
           "paper_link": "https://doi.org/10.1109/TAFFC.2022.3209311",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 24
         },
         {
           "title": "We Play and Learn Rhythmically: Gesture-based Rhythm Game for Children with Intellectual Developmental Disabilities to Learn Manual Sign",
@@ -65,7 +65,7 @@
           "journal": "CHI '22: Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems",
           "paper_link": "https://dl.acm.org/doi/10.1145/3491102.3517456",
           "thumbnail": "vovi.png",
-          "citations": 0
+          "citations": 14
         }
       ]
     },
